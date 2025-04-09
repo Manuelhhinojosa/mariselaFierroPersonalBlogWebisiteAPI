@@ -1,4 +1,3 @@
-// const { fileLoader } = require("ejs");
 const Post = require("../models/post");
 const cloudinary = require("cloudinary").v2;
 

@@ -10,12 +10,11 @@ const createUser = async (req, res) => {
     .then((response) => {
       console.log(response);
       const newUser = response;
-      res.status(200).json(newUser);
+      res.status(201).json(newUser);
     })
     .catch((error) => {
-      console.log("Something went wrong. This is the error:");
-      console.log(error);
-      console.log("Something went wrong. This is the end of the error:");
+      console.log("Error creating user:", error);
+      res.status(500).json({ message: "Error creating user" });
     });
 };
 
@@ -23,13 +22,14 @@ const loginUser = async (req, res) => {
   const { username, password } = req.body;
   const user = await User.findOne({ username });
   if (!user) {
-    res.status(500).json("username || password incorrect");
+    res.status(401).json({ message: "User not found" });
   } else {
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
-      res.status(500).json("username || password incorrect");
+      res.status(500).json("username or password incorrect");
     } else {
       res.status(200).json(user);
+      console.log("User logged in");
     }
   }
 };
