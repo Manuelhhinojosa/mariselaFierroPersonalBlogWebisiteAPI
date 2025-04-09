@@ -1,10 +1,10 @@
-📝 Marisela Fierro Blog API
+# 📝 Marisela Fierro Blog API
 
 This is the backend API for the **Marisela Fierro Blog & Website**. The API is built using the MERN stack (MongoDB, Express, React, Node.js) and provides the functionality for handling blog posts, user authentication, and media management for Marisela Fierro’s personal blog and portfolio site.
 
-📝 About the Project
+## 📝 About the Project
 
-This API supports the following features:
+### This API supports the following features:
 
 - **User Authentication**: Allows for user signup and login with hashed password storage using bcrypt.
 - **Post Management**: Full CRUD functionality for managing blog posts — creating, reading, updating, and deleting posts.
@@ -12,11 +12,11 @@ This API supports the following features:
 - **Likes**: Users can like posts, and the like count will be updated.
 - **Error Handling**: Proper error messages and status codes are returned for various actions.
 
-The API was built as part of the **Marisela Fierro Blog** project, designed and developed to manage all the data for the blog. It integrates seamlessly with the front-end React app.
+### The API was built as part of the **Marisela Fierro Blog** project, designed and developed to manage all the data for the blog. It integrates seamlessly with the front-end React app.
 
-🔗 The client side can bi visited here: [Marisela Blog API](https://mariselafierro.netlify.app)
+### 🔗 The client side can bi visited here: [Marisela Blog API](https://mariselafierro.netlify.app)
 
-⚙️ Technologies & Libraries Used
+## ⚙️ Technologies & Libraries Used
 
 - **Node.js + Express.js**: Server-side JavaScript and framework.
 - **MongoDB**: NoSQL database for storing user and post data.
@@ -27,7 +27,7 @@ The API was built as part of the **Marisela Fierro Blog** project, designed and 
 - **multer**: Middleware for handling file uploads.
 - **Cloudinary Node SDK**: For interacting with Cloudinary for media file management.
 
-💼 Real Client Collaboration
+## 💼 Real Client Collaboration
 
 The API was developed as part of a full-stack project in collaboration with a real client, **Marisela Fierro**, an artist and academic. The functionality was built according to her specific needs, including authentication, post management, and media handling.
 
