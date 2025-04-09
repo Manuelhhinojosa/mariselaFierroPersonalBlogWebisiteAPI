@@ -2,7 +2,14 @@ const Post = require("../models/post");
 const cloudinary = require("cloudinary").v2;
 
 const posts = async (req, res) => {
-  res.send("Marisela L Fierro's blog API");
+  try {
+    res.send("Marisela L Fierro's blog AasdfasdPI");
+  } catch {
+    (error) => {
+      console.log("Error connecting to the database:", error);
+      res.status(500).json({ message: "Error connecting to the database" });
+    };
+  }
 };
 
 const allPosts = async (req, res) => {
@@ -12,9 +19,8 @@ const allPosts = async (req, res) => {
       res.status(200).json(allPosts);
     })
     .catch((error) => {
-      console.log("Something went wrong. This is the error:");
-      console.log(error);
-      console.log("Something went wrong. This is the end of the error:");
+      console.error("Error fetching posts:", error);
+      res.status(500).json({ message: "Error fetching posts" });
     });
 };
 
@@ -26,9 +32,8 @@ const onePost = async (req, res) => {
       res.status(200).json(post);
     })
     .catch((error) => {
-      console.log("Something went wrong. This is the error:");
-      console.log(error);
-      console.log("Something went wrong. This is the end of the error:");
+      console.error("Error fetching post:", error);
+      res.status(500).json({ message: "Error fetching post" });
     });
 };
 
@@ -60,9 +65,8 @@ const createPost = async (req, res) => {
       res.status(200).json(post);
     })
     .catch((error) => {
-      console.log("Something went wrong. This is the error:");
-      console.log(error);
-      console.log("Something went wrong. This is the end of the error:");
+      console.error("Error creating post:", error);
+      res.status(500).json({ message: "Error fetching post" });
     });
 };
 
@@ -82,9 +86,8 @@ const deletePost = async (req, res) => {
       res.status(200).json(deletedPost);
     })
     .catch((error) => {
-      console.log("Something went wrong, This is the error");
-      console.log(error);
-      console.log("Something went wrong, This is the end of the error");
+      console.error("Error deliting post:", error);
+      res.status(500).json({ message: "Error deleting post" });
     });
 };
 
@@ -102,9 +105,8 @@ const handleLike = async (req, res) => {
       res.status(200).json(post);
     })
     .catch((error) => {
-      console.log("Something went wrong. This is the error:");
-      console.log(error);
-      console.log("Something went wrong. This is the end of the error:");
+      console.error("Error editing post:", error);
+      res.status(500).json({ message: "Error editing post" });
     });
 };
 
@@ -123,7 +125,8 @@ const editPost = async (req, res) => {
       res.status(200).json(post);
     })
     .catch((error) => {
-      console.log("this is the error", error);
+      console.error("Error editing post:", error);
+      res.status(500).json({ message: "Error editing post" });
     });
 };
 ``;

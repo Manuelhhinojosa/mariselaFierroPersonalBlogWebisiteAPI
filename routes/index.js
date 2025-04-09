@@ -6,7 +6,7 @@ router.get("/", async function (req, res, next) {
   try {
     res.redirect(302, "/posts");
   } catch (error) {
-    console.error("Error during redirect:", error);
+    console.log("Error during redirect:", error);
     res.status(500).json({ message: "Internal Server Error" });
   }
 });
