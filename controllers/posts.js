@@ -3,7 +3,7 @@ const cloudinary = require("cloudinary").v2;
 
 const posts = async (req, res) => {
   try {
-    res.send("Marisela L Fierro's blog API");
+    res.send("Marisela Fierro's blog API");
   } catch {
     (error) => {
       console.log("Error connecting to the database:", error);
@@ -103,6 +103,7 @@ const handleLike = async (req, res) => {
     .then((result) => {
       const post = result;
       res.status(200).json(post);
+      console.log("you did it!!!!");
     })
     .catch((error) => {
       console.error("Error editing post:", error);
