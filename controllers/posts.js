@@ -66,7 +66,7 @@ const createPost = async (req, res) => {
     })
     .catch((error) => {
       console.error("Error creating post:", error);
-      res.status(500).json({ message: "Error fetching post" });
+      res.status(500).json({ message: "Error creating post" });
     });
 };
 

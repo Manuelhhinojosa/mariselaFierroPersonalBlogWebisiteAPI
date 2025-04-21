@@ -8,5 +8,5 @@ mongoose
   })
   .catch((err) => {
     console.log("Mongo connection error:", err.message);
-    process.exit(1); // Exit with failure if connection fails
+    process.exit(1);
   });
