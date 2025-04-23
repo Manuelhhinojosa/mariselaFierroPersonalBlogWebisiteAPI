@@ -1,7 +1,7 @@
 const User = require("../models/user");
 const bcrypt = require("bcrypt");
 
-const createUser = async (req, res) => {
+const createUser2 = async (req, res) => {
   const { username, password } = req.body;
   const hashedPassword = await bcrypt.hash(password, 12);
   const user = await new User({ username: username, password: hashedPassword });
@@ -18,7 +18,7 @@ const createUser = async (req, res) => {
     });
 };
 
-const loginUser2 = async (req, res) => {
+const loginUser = async (req, res) => {
   const { username, password } = req.body;
   const user = await User.findOne({ username });
   if (!user) {
@@ -34,12 +34,12 @@ const loginUser2 = async (req, res) => {
   }
 };
 
-const loginUser = (req, res) => {
+const createUser = (req, res) => {
   res.send("Route not available. Contact developer");
 };
 
 module.exports = {
   createUser,
   loginUser,
-  loginUser2,
+  createUser2,
 };
