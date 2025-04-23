@@ -3,7 +3,9 @@ const cloudinary = require("cloudinary").v2;
 
 const posts = async (req, res) => {
   try {
-    res.send("Marisela Fierro's blog API");
+    res.send(
+      "Portfolio & Blog REST API (Back End). Visit `https://github.com/Manuelhhinojosa/mariselaFierroPersonalBlogWebisiteAPI`"
+    );
   } catch {
     (error) => {
       console.log("Error connecting to the database:", error);
