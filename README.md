@@ -14,7 +14,7 @@ This is the backend API for the **Marisela Fierro Blog & Website**. The API is b
 
 ### The API was built as part of the **Marisela Fierro Blog** project, designed and developed to manage all the data for the blog. It integrates seamlessly with the front-end React app.
 
-### 🔗 The client side can bi visited [here](https://mariselafierro.netlify.app)
+### 🔗 The client side can be visited [here](https://mariselafierro.netlify.app)
 
 ## ⚙️ Technologies & Libraries Used
 
