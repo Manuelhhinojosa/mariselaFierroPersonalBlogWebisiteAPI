@@ -18,7 +18,7 @@ const createUser = async (req, res) => {
     });
 };
 
-const loginUser = async (req, res) => {
+const loginUser2 = async (req, res) => {
   const { username, password } = req.body;
   const user = await User.findOne({ username });
   if (!user) {
@@ -34,7 +34,12 @@ const loginUser = async (req, res) => {
   }
 };
 
+const loginUser = (req, res) => {
+  res.send("Route not available. Contact developer");
+};
+
 module.exports = {
   createUser,
   loginUser,
+  loginUser2,
 };
